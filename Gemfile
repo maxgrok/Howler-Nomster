@@ -61,3 +61,6 @@ end
 
 # Include pagination gem
 gem 'kaminari'
+
+# Include Simple Form gem
+gem 'simple_form'
