@@ -64,3 +64,6 @@ gem 'kaminari'
 
 # Include Simple Form gem
 gem 'simple_form'
+
+# Include Font-Awesome gem
+gem 'font-awesome-rails'
