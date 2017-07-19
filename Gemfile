@@ -70,3 +70,10 @@ gem 'font-awesome-rails'
 
 # Include Devise gem - user authentication
 gem 'devise'
+
+# Include Geocoder gem
+gem 'geocoder'
+
+# Include Figaro gem to enable storage of API Key into ENV variable
+gem 'figaro'
+
