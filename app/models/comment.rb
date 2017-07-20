@@ -10,4 +10,8 @@ class Comment < ApplicationRecord
         'five star': '5_stars'
     }
     
+    def humanized_rating
+        RATINGS.invert[self.rating]
+    end
+    
 end
