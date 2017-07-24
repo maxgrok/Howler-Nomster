@@ -77,3 +77,5 @@ gem 'geocoder'
 # Include Figaro gem to enable storage of API Key into ENV variable
 gem 'figaro'
 
+# Include Carrierwave gem as uploader for photos
+gem 'carrierwave'
