@@ -39,7 +39,7 @@
       
        <!-- Button to trigger COMMENTS modal -->
        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-         Add a Commmment
+         Add a Comment
        </button><br />
    <% end %>
   </div>
@@ -94,29 +94,29 @@
  <!-- Button to trigger PHOTOS modal -->
 <div class="float-right">
   <% if current_user && current_user == @place.user %>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-      Upload Photopoopo
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myPhotoModal">
+      Upload a Photo
     </button>
   <% end %>
 </div>
 
 <!-- PHOTOS Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
-         <h4 class="modal-title" id="myModalLabel">Upload a Phoooto</h4>
+         <h4 class="modal-title" id="myModalLabel">Upload a Photo</h4>
       </div>
       
       <%= simple_form_for @photo, url: place_photos_path(@place), multiple: true do |f| %>
         <div class="modal-body">     
-          <h1>Add a Photo</h1>   
+      <!--    <h1>Add a Photo</h1>  --> 
           <%= f.input :picture %>
           <%= f.input :caption %><br />
-          <%= f.submit 'Update', class: 'btn-primary' %>
+       <!--   <%= f.submit 'Update', class: 'btn-primary' %>  -->
         </div>
         
         <div class="modal-footer">
@@ -139,8 +139,7 @@
   <% @place.photos.each do |photo| %>
     <div class="col-12 col-sm-6">
       
-        <%= photo %>
-        <small><%= photo.user.email %></small>
+        <%= image_tag photo.picture %>
       </blockquote>
     </div>
   <% end %>

@@ -25,7 +25,7 @@ SimpleForm.setup do |config|
     b.optional :maxlength
     b.optional :minlength
     b.optional :readonly
-    b.use :label, class: 'control-label'
+    b.use :label, class: 'control-label col-12'     #######  Changes here with Andrew   ##########
 
     b.use :input
     b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
@@ -76,9 +76,9 @@ SimpleForm.setup do |config|
     b.optional :maxlength
     b.optional :minlength
     b.optional :readonly
-    b.use :label, class: 'col-sm-3 control-label'
+    b.use :label, class: 'col-xs-12 control-label'    #######  Changes here with Andrew   ##########
 
-    b.wrapper tag: 'div', class: 'col-sm-9' do |ba|
+    b.wrapper tag: 'div', class: 'col-xs-12' do |ba|   #######  Changes here with Andrew   ##########
       ba.use :input
       ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
       ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
