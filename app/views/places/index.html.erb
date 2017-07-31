@@ -23,8 +23,24 @@
        </blockquote>
       </div>
     <% end %>
-  </div>
+    
+
+    <div class="clear"></div>
+    <% if place.photos.present? %> 
+     
+      
+          <%= image_tag place.photos.last.picture, height: '100px', class: 'image_fluid' %></br >
+          <%= place.photos.last.caption %>
+       
+     
+    <% end %>
+    </div>
+      
+
 <% end %>
+    
+
+
       
 <%= paginate @places %>
 

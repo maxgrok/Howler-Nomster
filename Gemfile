@@ -79,3 +79,6 @@ gem 'figaro'
 
 # Include Carrierwave gem as uploader for photos
 gem 'carrierwave'
+
+# Include gem Minimagick to work with Imagemagick for manipulating images and saving memory during runs
+gem 'mini_magick'
