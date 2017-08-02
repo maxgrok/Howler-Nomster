@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     resources :photos, :create, :delete
   end
   
+  resources :users, only: :show
+  
 end
