@@ -107,3 +107,29 @@ blockquote p {
 .carousel {
   box-shadow: 0px 3px 8px #2a2a2a;
 }
+
+.wrapper_align_image_with_paragraph {
+  max-width: 800px;
+  float: none;
+  margin: 0 auto;
+  height: 150px;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.tab { 
+  margin-left: 100px; 
+  text-indent: 100px;
+}
+
+#scroll {
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
