@@ -4,5 +4,10 @@
          font_url('chunkfive-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-awesome {
+    font-family: 'fa';
+    src: font_url('font-awesome-webfont.woff')format('woff'),
+         font_url('font-awesome-webfont.woff2')format('woff2');
 }

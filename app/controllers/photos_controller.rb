@@ -7,7 +7,7 @@ class PhotosController < ApplicationController
     redirect_to place_path(@place)
   end
   
-  #def destroy
+  #def destroy  Provide a DELETE function at a later date - Guy
   #  @place = Place.find(params[:id])
   #  if @place.user != current_user
   #    return render text: 'Not Allowed', status: :forbidden

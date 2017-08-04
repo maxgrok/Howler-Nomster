@@ -1,0 +1,2 @@
+class LightboxController < ApplicationController
+end

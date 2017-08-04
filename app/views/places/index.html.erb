@@ -55,6 +55,19 @@
       <div class="pull-right">
         <% if place.photos.present? %>
           <%= image_tag place.photos.last.picture, height: '100px', class: 'image_fluid' %></br >
+          
+          
+<!--          <p>-->
+<!--  Add a <code>data-fancybox</code> attribute to any image link to enable fancyBox.-->
+<!--</p>-->
+
+<!--<p>-->
+<!--  <a href="https://farm4.staticflickr.com/3953/15594397982_477385f90d_b_d.jpg" data-fancybox>-->
+<!--    <img src="https://farm4.staticflickr.com/3953/15594397982_477385f90d_m_d.jpg" />-->
+<!--  </a>-->
+<!--</p>-->
+          
+          
           <%= place.photos.last.caption %>
         <% end %>  
       </div>

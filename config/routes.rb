@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   root 'places#index'
   resources :places do
     resources :comments, only: :create
-    # resources :photos, only: :create
-    resources :photos, :create, :delete
+    resources :photos, only: :create
+    #resources :photos, :create, :delete
   end
   
   resources :users, only: :show
+  
+  resource :lightbox, only: [:show], controller: :lightbox
+  root to: "lightbox#show"
   
 end

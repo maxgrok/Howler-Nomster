@@ -82,3 +82,6 @@ gem 'carrierwave'
 
 # Include gem Minimagick to work with Imagemagick for manipulating images and saving memory during runs
 gem 'mini_magick'
+
+# Include gem FancyBox to provide instant photo resizing and touch/scroll results
+gem 'fancybox-rails', '~> 0.3.1'
