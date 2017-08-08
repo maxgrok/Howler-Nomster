@@ -101,9 +101,8 @@
             <div class="col-12 col-sm-2", style="padding-top:50px; padding-bottom:30px" >
                <% if photo.picture.present? %>
                  <!--<div class="fancybox">-->
-                   <%= image_tag photo.picture, height: '100px', class: 'lightbox' %></br >
+                   <%= image_tag photo.picture, height: '100px', class: 'image_fluid' %></br >
                  <!--</div>-->
-                 <%#= image_tag photo.picture, height: '100px', class: 'image_fluid' %></br >
                  <%= photo.caption %>
                <% end %>
             </div>
