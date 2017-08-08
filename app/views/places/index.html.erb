@@ -57,18 +57,16 @@
           <%= image_tag place.photos.last.picture, height: '100px', class: 'image_fluid' %></br >
           
           
-<!--          <p>-->
-<!--  Add a <code>data-fancybox</code> attribute to any image link to enable fancyBox.-->
-<!--</p>-->
-
+<!--  Figure out how to used Fancybox for the photo displayed here in the booyah-box  -->
+<!--  https://codepen.io/fancyapps/pen/WjVXyx?editors=1000 -->
+<!---->
 <!--<p>-->
 <!--  <a href="https://farm4.staticflickr.com/3953/15594397982_477385f90d_b_d.jpg" data-fancybox>-->
 <!--    <img src="https://farm4.staticflickr.com/3953/15594397982_477385f90d_m_d.jpg" />-->
 <!--  </a>-->
 <!--</p>-->
-          
-          
-          <%= place.photos.last.caption %>
+        
+          <%= place.photos.last.caption %><br />
         <% end %>  
       </div>
      </div>
@@ -82,9 +80,10 @@
            <b><%= place.comments.last.humanized_rating %></b> -
          <% end %>
          <%= place.comments.last.message %><br />
-         <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
            <small><%= place.comments.last.user.email %></small>
-         </p>
+           <div class="pull-right">
+             <small><%= place.comments.last.created_at.strftime("%B %d, %Y") %></small>
+           </div>
        </blockquote>
       </div>
     <% end %>

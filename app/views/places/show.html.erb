@@ -100,7 +100,10 @@
           <% @place.photos.each do |photo| %>
             <div class="col-12 col-sm-2", style="padding-top:50px; padding-bottom:30px" >
                <% if photo.picture.present? %>
-                 <%= image_tag photo.picture, height: '100px', class: 'image_fluid' %></br >
+                 <!--<div class="fancybox">-->
+                   <%= image_tag photo.picture, height: '100px', class: 'lightbox' %></br >
+                 <!--</div>-->
+                 <%#= image_tag photo.picture, height: '100px', class: 'image_fluid' %></br >
                  <%= photo.caption %>
                <% end %>
             </div>
@@ -108,6 +111,18 @@
        </div>
     </div>
 </div>
+
+
+<!--<p>  Figure out how to used Fancybox for the photos display across the booyah-box  -->
+<!--  Add a <code>data-fancybox</code> attribute to any image link to enable fancyBox.-->
+<!--</p>-->
+
+<!--<p>-->
+<!--  <a href="https://farm4.staticflickr.com/3953/15594397982_477385f90d_b_d.jpg" data-fancybox>-->
+<!--    <img src="https://farm4.staticflickr.com/3953/15594397982_477385f90d_m_d.jpg" />-->
+<!--  </a>-->
+<!--</p>-->
+
 
 <div class="clear"></div>
   
@@ -160,4 +175,3 @@
     </div>
   </div>
 </div>
-
