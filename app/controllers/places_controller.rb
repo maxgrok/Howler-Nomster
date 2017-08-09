@@ -1,15 +1,18 @@
 class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
+  # list places (GET)
   def index
       @places = Place.all
       @places = Place.order(:name).page(params[:page])
   end
   
+  # form to create a new place (GET)
   def new
     @place = Place.new
   end
   
+  # posted (POST) place information to create a place
   def create
     @place = current_user.places.create(place_params)
     if @place.valid?
@@ -19,12 +22,14 @@ class PlacesController < ApplicationController
     end
   end
   
+  # displays information (GET) about a single place
   def show
     @place = Place.find(params[:id])
     @comment = Comment.new
     @photo = Photo.new
   end
   
+  # renders an edit (GET) form for an existing place
   def edit
     @place = Place.find(params[:id])
     
@@ -33,6 +38,7 @@ class PlacesController < ApplicationController
     end
   end
   
+  # puts (PUT) form data to update an existing place
   def update
     @place = Place.find(params[:id])
     
@@ -48,6 +54,7 @@ class PlacesController < ApplicationController
     end
   end
   
+  # deletes (DELETE) a place from the system (not necessarily the database)
   def destroy
     @place = Place.find(params[:id])
     if @place.user != current_user

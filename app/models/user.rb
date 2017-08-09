@@ -6,6 +6,7 @@ class User < ApplicationRecord
          
   has_many :places
   has_many :comments
+  has_many :commented_on_places, through: :comments, source: :place
   has_many :photos
 
 end

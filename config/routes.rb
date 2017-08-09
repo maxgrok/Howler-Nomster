@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'places#index'
+  #resource :dashboard, controller: 'dashboard'
   resources :places do
-    resources :comments, only: :create
-    resources :photos, only: :create
-    #resources :photos, :create, :delete
+    resources :comments, only: [:create, :update, :destroy, :edit]
+    resources :photos, only: [:create, :destroy]
+    #resources :photos, only: [ :create, :delete]
   end
   
   resources :users, only: :show
