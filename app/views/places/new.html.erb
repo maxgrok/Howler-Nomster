@@ -7,5 +7,11 @@
     <%= f.input :description %>
     <br />
     <%= f.submit 'Create', class: 'btn-primary' %>
+    
+    <!-- Include BACK link -->
+    <div class="float-right"> 
+      <%= link_to "<< Back <<", :back %>
+    </div>
+    
   <% end %>
 </div>

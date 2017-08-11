@@ -6,5 +6,11 @@
     <%= f.input :rating %>
     <br />
     <%= f.submit 'Update', class: 'btn-primary' %>
+    
+    <!-- Include BACK link -->
+    <div class="float-right">
+        <%= link_to "<< Back <<", :back %>
+    </div>
+    
   <% end %>
 </div>
