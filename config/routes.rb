@@ -6,12 +6,16 @@ Rails.application.routes.draw do
   resources :places do
     resources :comments, only: [:create, :update, :destroy, :edit]
     resources :photos, only: [:create, :destroy]
-    #resources :photos, only: [ :create, :delete]
   end
   
-  resources :users, only: :show
+  resources :users, only: [:show, :destroy]
   
-  resource :lightbox, only: [:show], controller: :lightbox
-  root to: "lightbox#show"
+  # resources :users do
+  #   resources :comments, only: [:edit, :update, :destroy]
+  #   resources :photos, only: [:destroy]
+  # end
+  
+  # resource :lightbox, only: [:show], controller: :lightbox
+  # root to: "lightbox#show"
   
 end

@@ -1,7 +1,3 @@
-<!-- <h1>Welcome to my Awesome Web App</h1>  -->
-
-<!-- <h1><%#= @places.inspect %></h1>  -->
-
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" interval= "5000">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -56,16 +52,8 @@
         <% if place.photos.present? %>
           <%= image_tag place.photos.last.picture, height: '100px', class: 'image_fluid' %></br >
           
-          
 <!--  Figure out how to used Fancybox for the photo displayed here in the booyah-box  -->
-<!--  https://codepen.io/fancyapps/pen/WjVXyx?editors=1000 -->
-<!---->
-<!--<p>-->
-<!--  <a href="https://farm4.staticflickr.com/3953/15594397982_477385f90d_b_d.jpg" data-fancybox>-->
-<!--    <img src="https://farm4.staticflickr.com/3953/15594397982_477385f90d_m_d.jpg" />-->
-<!--  </a>-->
-<!--</p>-->
-        
+
           <%= place.photos.last.caption %><br />
         <% end %>  
       </div>

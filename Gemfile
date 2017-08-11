@@ -66,7 +66,7 @@ gem 'kaminari'
 gem 'simple_form'
 
 # Include Font-Awesome gem
-gem 'font-awesome-sass', '~> 4.7.0'
+gem 'font-awesome-rails'
 
 # Include Devise gem - user authentication
 gem 'devise'
