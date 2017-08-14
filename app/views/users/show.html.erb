@@ -24,12 +24,10 @@
   <div id="scroll">
     <div class="row">
       <% @user.places.each do |place| %>
-      <% if @user.comments %>
         <!-- Still need to do: Check if you actually put in a comment, vs. just entered a place name -->
         <div class="col-12 col-sm-6">
           <%= place.name %>
           <%#= link_to path_place(place), @user.places.name %>  <!-- Does NOT work <<<<<<<<<<<  -->
-          <% end %>
         </div>
       <% end %><br/ >
     </div>
