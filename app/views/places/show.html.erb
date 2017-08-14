@@ -44,7 +44,7 @@
     <%# if current_user && current_user == @place.user %>
       <!--  Moved places edit buttons to booyah-box, kept comments and photos buttons separate and below -->
       <!-- Trying to change these buttons to smaller pencil and trash can icons but having difficulties -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myCommentModal">
         Add Comment
       </button>
     <%# end %>
@@ -56,7 +56,7 @@
 
   <div class="clear"></div>
 
-  <% if current_user && current_user == @place.user %>
+  <%# if current_user && current_user == @place.user %>
     <div id="scroll">
       <div class="row">
         <% @place.comments.each do |comment| %>
@@ -73,7 +73,7 @@
         <br/ >
       </div>
     </div>
-  <% end %>
+  <%# end %>
 </div>
   
 <div class="clear"></div>
@@ -81,11 +81,11 @@
   <!-- PHOTOS booyah-box -->
 <div class="booyah-box col-10 offset-1">
   <div class="float-right">
-    <% if current_user && current_user == @place.user %>  
+    <%# if current_user && current_user == @place.user %>  
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myPhotoModal">
         Upload Photo
       </button>
-    <% end %>
+    <%# end %>
   </div>
   
   <!--<div class="col-10 offset-1">-->
@@ -125,7 +125,7 @@
 <div class="clear"></div>
   
 <!-- COMMENTS Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myCommentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
