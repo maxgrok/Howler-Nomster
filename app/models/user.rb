@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :comments
   has_many :photos
   # For later deletion of photos and comments per place
-  has_many :commented_on_places, through: :comments, source: :place 
+ # has_many :commented_on_places, through: :comments, source: :place 
   
 end
