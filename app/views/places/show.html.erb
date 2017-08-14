@@ -41,13 +41,13 @@
   <!-- COMMENTS booyah-box -->
 <div class="booyah-box col-10 offset-1">
   <div class="float-right">
-    <% if current_user && current_user == @place.user %>
+    <%# if current_user && current_user == @place.user %>
       <!--  Moved places edit buttons to booyah-box, kept comments and photos buttons separate and below -->
       <!-- Trying to change these buttons to smaller pencil and trash can icons but having difficulties -->
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
         Add Comment
       </button>
-    <% end %>
+    <%# end %>
   </div>
 
   <!--<div class="col-10 offset-1">-->
