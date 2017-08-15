@@ -85,3 +85,6 @@ gem 'mini_magick'
 
 # Include gem FancyBox to provide instant photo resizing and touch/scroll results
 gem 'fancybox-rails', '~> 0.3.1'
+
+# Include fog gem to work with AWS
+gem "fog-aws"
