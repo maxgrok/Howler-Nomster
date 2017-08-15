@@ -33,47 +33,35 @@
     </script>
     <div id="map"></div>
   <% end %>
-</div>
+</div><br />
   
-  <br />
-  
-  <!-- Call Places_buttons method here to put in buttons WHEN I can figure out how to do so - Guy -->
-  <!-- COMMENTS booyah-box -->
+<!-- COMMENTS booyah-box -->
 <div class="booyah-box col-10 offset-1">
   <div class="float-right">
-    <%# if current_user && current_user == @place.user %>
-      <!--  Moved places edit buttons to booyah-box, kept comments and photos buttons separate and below -->
-      <!-- Trying to change these buttons to smaller pencil and trash can icons but having difficulties -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myCommentModal">
-        Add Comment
-      </button>
-    <%# end %>
+    <!--  Moved places, comments and photos edit buttons to respective booyah-boxes -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myCommentModal">
+      Add Comment
+    </button>
   </div>
 
-  <!--<div class="col-10 offset-1">-->
-    <h1 class="float-left">Comments</h1>
-  <!--</div>-->
-
+  <h1 class="float-left">Comments</h1>
   <div class="clear"></div>
 
-  <%# if current_user && current_user == @place.user %>
-    <div id="scroll">
-      <div class="row">
-        <% @place.comments.each do |comment| %>
-          <div class="col-12 col-sm-6">
-            <blockquote>
-              <% if comment.humanized_rating.present? %>
-                <b><%= comment.humanized_rating %></b> -
-              <% end %>
-              <%= comment.message %>
-              <small><%= comment.user.email %></small>
-            </blockquote>
-          </div>
-        <% end %>
-        <br/ >
-      </div>
+  <div id="scroll">
+    <div class="row">
+      <% @place.comments.each do |comment| %>
+        <div class="col-12 col-sm-6">
+          <blockquote>
+            <% if comment.humanized_rating.present? %>
+              <b><%= comment.humanized_rating %></b> -
+            <% end %>
+            <%= comment.message %>
+            <small><%= comment.user.email %></small>
+          </blockquote>
+        </div>
+      <% end %><br/ >
     </div>
-  <%# end %>
+  </div>
 </div>
   
 <div class="clear"></div>
@@ -81,33 +69,28 @@
   <!-- PHOTOS booyah-box -->
 <div class="booyah-box col-10 offset-1">
   <div class="float-right">
-    <%# if current_user && current_user == @place.user %>  
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myPhotoModal">
-        Upload Photo
-      </button>
-    <%# end %>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myPhotoModal">
+      Upload Photo
+    </button>
   </div>
   
-  <!--<div class="col-10 offset-1">-->
-    <h1 class="float-left">Photos</h1>
-  <!--</div>-->
-  
+  <h1 class="float-left">Photos</h1>
   <div class="clear"></div>
   
-    <div id="scroll">
-       <div class="row">
-          <% @place.photos.each do |photo| %>
-            <div class="col-10 col-sm-2", style="padding-top:50px; padding-bottom:30px" >
-               <% if photo.picture.present? %>
-                 <!--<div class="fancybox">-->
-                   <%= image_tag photo.picture, height: '100px', class: 'image_fluid' %></br >
-                 <!--</div>-->
-                 <%= photo.caption %>
-               <% end %>
-            </div>
-          <% end %>
-       </div>
-    </div>
+  <div id="scroll">
+     <div class="row">
+        <% @place.photos.each do |photo| %>
+          <div class="col-10 col-sm-2", style="padding-top:50px; padding-bottom:30px" >
+             <% if photo.picture.present? %>
+               <!--<div class="fancybox">-->
+                 <%= image_tag photo.picture, height: '100px', class: 'image_fluid' %></br >
+               <!--</div>-->
+               <%= photo.caption %>
+             <% end %>
+          </div>
+        <% end %>
+     </div>
+  </div>
 </div>
 
 
