@@ -15,7 +15,6 @@
   <div class="clear"></div>
 </div>
 
-<!-- Still to be done: Make place names hyperlinks to the same place page -->
 <!-- PLACES LIST booyah-box -->
 <div class="booyah-box col-10 offset-1">
   <h1 class="float-left">Places I've Reviewed</h1>
@@ -26,7 +25,8 @@
       <% @user.places.each do |place| %>
         <!-- Still need to do: Check if you actually put in a comment, vs. just entered a place name -->
         <div class="col-12 col-sm-6">
-          <%= place.name %>
+          <%#= place.name %>
+          <%= link_to place.name, place_path(place) %><br />
           <%#= link_to path_place(place), @user.places.name %>  <!-- Does NOT work <<<<<<<<<<<  -->
         </div>
       <% end %><br/ >
@@ -71,13 +71,13 @@
        
           <% @user.photos.each do |photo| %>
             <div class="col-12 col-sm-2", style="padding-top:50px; padding-bottom:30px" >
-               <% if @user.photos.picture.present? %>
+               
                <h5>xxxxxxxxxx photo</h5>
                  
                    <%= image_tag photo.picture, height: '100px', class: 'image_fluid' %></br >
                 
                  <%= photo.caption %>
-               <% end %>
+
             </div>
           <% end %>
   
